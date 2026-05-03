@@ -39,5 +39,3 @@ document.querySelectorAll('.form').forEach((form) => {
     form.reset();
   });
 });
-
-openModal('projects-modal');
