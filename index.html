@@ -29,7 +29,9 @@
           вiд вартостi робiт i матерiалiв
         </p>
 
-        <button class="hero__btn action-btn">ОТРИМАТИ КОНСУЛЬТАЦІЮ</button>
+        <button class="hero__btn action-btn" data-modal="callback-modal">
+          ОТРИМАТИ КОНСУЛЬТАЦІЮ
+        </button>
       </section>
 
       <section class="order">
@@ -54,21 +56,21 @@
               <p class="order__item-text">Доставку</p>
             </li>
           </ul>
-          <form action="" class="order__form">
+          <form action="" class="order__form form">
             <div class="order__form-top">
               <div class="order__form-input">
                 <div class="order__form-input-ico">
                   <img src="./images/user.svg" alt="Ваше ім’я" />
                 </div>
-                <input type="text" placeholder="Ім’я" />
+                <input type="text" placeholder="Ім’я" required />
               </div>
               <div class="order__form-input">
                 <div class="order__form-input-ico">
                   <img src="./images/tel.svg" alt="Ваше ім’я" />
                 </div>
-                <input type="text" placeholder="Телефон" />
+                <input type="tel" placeholder="Телефон" required />
               </div>
-              <button class="order__form-btn action-btn">ЗАЛИШИТИ ЗАЯВКУ</button>
+              <button type="submit" class="order__form-btn action-btn">ЗАЛИШИТИ ЗАЯВКУ</button>
             </div>
             <div class="order__form-bottom">
               <input type="checkbox" name="" id="order__form-check" />
@@ -121,7 +123,9 @@
           </div>
         </div>
         <div class="container since__container">
-          <button class="since__btn action-btn">ОТРИМАТИ БЕЗКОШТОВНУ КОНСУЛЬТАЦІЮ</button>
+          <button class="since__btn action-btn" data-modal="callback-modal">
+            ОТРИМАТИ БЕЗКОШТОВНУ КОНСУЛЬТАЦІЮ
+          </button>
         </div>
       </section>
 
@@ -206,7 +210,7 @@
               </div>
             </li>
           </ul>
-          <button class="projects__btn action-btn">Всі проекти</button>
+          <button class="projects__btn action-btn" data-modal="projects-modal">Всі проекти</button>
         </div>
       </section>
 
@@ -238,7 +242,7 @@
                 <p class="decide__item-text">Безоплатний виклик замірника</p>
               </li>
             </ul>
-            <form class="decide__form" action="">
+            <form class="decide__form form" action="">
               <p class="decide__form-title">ПОТРІБНА КОНСУЛЬТАЦІЯ ?</p>
               <p class="decide__form-text">Залиште заявку на безкоштовну консультацію!</p>
 
@@ -246,14 +250,14 @@
                 <div class="decide__form-input-ico">
                   <img src="./images/user.svg" alt="Ваше ім’я" />
                 </div>
-                <input type="text" placeholder="Ім’я" />
+                <input type="text" placeholder="Ім’я" required />
               </div>
 
               <div class="decide__form-input">
                 <div class="decide__form-input-ico">
                   <img src="./images/tel.svg" alt="Ваше ім’я" />
                 </div>
-                <input type="text" placeholder="Телефон" />
+                <input type="tel" placeholder="Телефон" required />
               </div>
 
               <button class="order__form-btn action-btn">ЗАЛИШИТИ ЗАЯВКУ</button>
@@ -326,7 +330,9 @@
 
           <div class="afraid__bottom">
             <p class="afraid__bottom-text">ЗАМОВИТИ ЛАНДШАФТНИЙ ДИЗАЙН БЕЗ ЗАЙВИХ ПРОБЛЕМ</p>
-            <button class="afraid__bottom-btn action-btn">ЗАМОВИТИ</button>
+            <button class="afraid__bottom-btn action-btn" data-modal="callback-modal">
+              ЗАМОВИТИ
+            </button>
           </div>
         </div>
       </section>
@@ -405,7 +411,7 @@
                 <p class="decide__item-text">Безоплатний виклик замірника</p>
               </li>
             </ul>
-            <form class="decide__form" action="">
+            <form class="decide__form form" action="">
               <p class="decide__form-title">ПОТРІБНА КОНСУЛЬТАЦІЯ ?</p>
               <p class="decide__form-text">Залиште заявку на безкоштовну консультацію!</p>
 
@@ -413,14 +419,14 @@
                 <div class="decide__form-input-ico">
                   <img src="./images/user.svg" alt="Ваше ім’я" />
                 </div>
-                <input type="text" placeholder="Ім’я" />
+                <input type="text" placeholder="Ім’я" required />
               </div>
 
               <div class="decide__form-input">
                 <div class="decide__form-input-ico">
                   <img src="./images/tel.svg" alt="Ваше ім’я" />
                 </div>
-                <input type="text" placeholder="Телефон" />
+                <input type="tel" placeholder="Телефон" required />
               </div>
 
               <button class="order__form-btn action-btn">ЗАЛИШИТИ ЗАЯВКУ</button>
@@ -464,5 +470,128 @@
         </div>
       </div>
     </footer>
+    <!-- Projects modal -->
+    <div class="modal" id="projects-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content modal__content-projects">
+        <button class="modal__close">×</button>
+
+        <div class="modal-projects__top">
+          <div class="modal-projects__slide">
+            <img src="./images/project1.jpg" alt="projects" />
+
+            <div class="modal-projects__slide-bottom">
+              <button class="prev-slide"><img src="./images/arrow.svg" alt="" /></button>
+              <div class="modal-projects__slide-pagination">
+                <div class="modal-projects__slide-item"></div>
+                <div class="modal-projects__slide-item"></div>
+                <div class="modal-projects__slide-item active"></div>
+                <div class="modal-projects__slide-item"></div>
+              </div>
+              <button class="next-slide"><img src="./images/arrow.svg" alt="" /></button>
+            </div>
+          </div>
+          <div class="modal-projects__details">
+            <p class="modal-projects__name">Проект Манхэттен</p>
+            <p class="modal-projects__text">
+              Наполняем ландшафтный дизайн различными хвойными и лиственнымиНаполняем ландшафтный
+              дизайн различными хвойными и лиственными
+            </p>
+            <p class="modal-projects__text">
+              Наполняем ландшафтный дизайн различными хвойными и лиственнымиНаполняем ландшафтный
+              дизайн различными хвойными и лиственными
+            </p>
+          </div>
+        </div>
+        <h2 class="section-title">
+          ЗАПОВНІТЬ ФОРМУ ЗАМОВЛЕННЯ НИЖЧЕ І <br />
+          <span class="dark-green">ОТРИМАЙТЕ БЕЗКОШТОВНО</span>
+        </h2>
+
+        <ul class="modal-projects__benefits">
+          <li class="modal-projects__benefit">
+            <img
+              src="./images/decide4.svg"
+              alt="Безкоштовний прорахунок"
+              class="modal-projects__benefit-img"
+            />
+            <p class="modal-projects__benefit-text">Безкоштовний прорахунок</p>
+          </li>
+          <li class="modal-projects__benefit">
+            <img
+              src="./images/decide2.svg"
+              alt="3D проект вашої ділянки"
+              class="modal-projects__benefit-img"
+            />
+            <p class="modal-projects__benefit-text">3D проект вашої ділянки</p>
+          </li>
+          <li class="modal-projects__benefit">
+            <img src="./images/why6.svg" alt="Гарантія" class="modal-projects__benefit-img" />
+            <p class="modal-projects__benefit-text">Гарантія</p>
+          </li>
+        </ul>
+
+        <form class="form modal-projects__form">
+          <div class="modal-projects__form-top">
+            <div class="decide__form-input">
+              <div class="decide__form-input-ico">
+                <img src="./images/user.svg" alt="Ваше ім’я" />
+              </div>
+              <input type="text" placeholder="Ім’я" required />
+            </div>
+
+            <div class="decide__form-input">
+              <div class="decide__form-input-ico">
+                <img src="./images/tel.svg" alt="Ваше ім’я" />
+              </div>
+              <input type="tel" placeholder="Телефон" required />
+            </div>
+            <button type="submit " class="decide__form-btn action-btn">ЗАЛИШИТИ ЗАЯВКУ</button>
+          </div>
+          <div class="order__form-bottom">
+            <input type="checkbox" name="" id="modal__form-check" />
+            <label for="modal__form-check">Я приймаю умови передачі інформації</label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Callback modal -->
+    <div class="modal" id="callback-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content">
+        <button class="modal__close">×</button>
+
+        <h2 class="modal__title section-title">Замовлення зворотнього дзвінка</h2>
+
+        <form class="form callback-form">
+          <div class="decide__form-input modal__input">
+            <div class="decide__form-input-ico">
+              <img src="./images/tel.svg" alt="Ваше ім’я" />
+            </div>
+            <input type="tel" placeholder="Телефон" required />
+          </div>
+          <button type="submit" class="action-btn modal__btn">
+            ОТРИМАТИ БЕЗКОШТОВНУ КОНСУЛЬТАЦІЮ
+          </button>
+          <div class="order__form-bottom">
+            <input type="checkbox" name="" id="decide__form-check" />
+            <label for="decide__form-check">Я приймаю умови передачі інформації</label>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Thanks modal -->
+    <div class="modal" id="thanks-modal">
+      <div class="modal__overlay"></div>
+      <div class="modal__content modal__content-thanks">
+        <button class="modal__close">×</button>
+
+        <h2 class="modal__title section-title">Дякуємо!</h2>
+        <p class="modal__text">Ми зв’яжемось з вами найближчим часом</p>
+      </div>
+    </div>
+    <script src="./js/script.js"></script>
   </body>
 </html>

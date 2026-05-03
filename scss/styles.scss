@@ -10,6 +10,7 @@ body {
 }
 .main {
   background-color: #fffceb;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1140px;
@@ -142,6 +143,7 @@ body {
   border: 2px solid #46912e;
   border-radius: 20px;
   display: flex;
+  height: 80px;
   overflow: hidden;
   input {
     border: none;
