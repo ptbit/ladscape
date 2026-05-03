@@ -219,7 +219,7 @@ body {
   flex-direction: column;
   padding: 250px 15px;
   gap: 100px;
-  background-image: url("/images/hero2-bg.jpg");
+  background-image: url("../images/hero2-bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
