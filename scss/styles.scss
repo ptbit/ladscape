@@ -1,16 +1,15 @@
 body {
   overflow-x: hidden;
   scroll-behavior: smooth;
-}
-.main {
-  background-color: #fffceb;
-  color: white;
-
   font-family: 'Inter', sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-size: 20px;
   font-style: normal;
+  color: white;
+}
+.main {
+  background-color: #fffceb;
 }
 .container {
   max-width: 1140px;
@@ -415,6 +414,9 @@ body {
   display: flex;
   gap: 30px;
 }
+.decide__content-reversed {
+  flex-direction: row-reverse;
+}
 .decide__list {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -478,10 +480,6 @@ body {
 .afraid {
   padding: 100px 15px;
   background-color: #eef3df;
-}
-.container {
-}
-.afraid__container {
 }
 .afraid__title {
   margin-bottom: 80px;
@@ -588,6 +586,94 @@ body {
     transform: translateX(-50%) translateY(0px);
   }
 }
+//  ******************* WHY *******************
+//  ******************* WHY *******************
+//  ******************* WHY *******************
+.why {
+  padding: 100px 15px;
+  background: linear-gradient(0deg, #fffceb, #fffceb), #f9f9f1;
+}
+.why__title {
+  margin-bottom: 100px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 150%;
+  color: #222222;
+}
+.why__grid {
+  display: grid;
+  gap: 70px 30px;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.why__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.why__item-img {
+  margin-bottom: 10px;
+  height: 100px;
+}
+.why__item-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 130%;
+  color: #0d430d;
+}
+.why__item-text {
+  text-align: center;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 130%;
+  color: #222222;
+}
+
+//  ******************* DECIDE2 *******************
+//  ******************* DECIDE2 *******************
+//  ******************* DECIDE2 *******************
+.decide2 {
+  background: linear-gradient(0deg, #eef3df, #eef3df), #f9f9f1;
+}
+
+//  ******************* FOOTER *******************
+//  ******************* FOOTER *******************
+//  ******************* FOOTER *******************
+.footer {
+  background: linear-gradient(0deg, #eef3df, #eef3df), #f9f9f1;
+}
+.footer__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 50px 100px;
+  background: #46912e;
+  border-radius: 30px 30px 0px 0px;
+}
+.footer__title {
+  margin-bottom: 50px;
+  color: #ffffff;
+}
+.footer__contacts {
+  display: flex;
+  justify-content: space-between;
+}
+.footer__address,
+.footer__tels {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+.footer__contacts-ico {
+}
+.footer__contacts-text {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 130%;
+}
+.footer__tels {
+  gap: 20px;
+}
 //  ******************* MEDIA *******************
 //  ******************* MEDIA *******************
 //  ******************* MEDIA *******************
@@ -617,6 +703,11 @@ body {
     max-width: 300px;
   }
 }
+@media (max-width: 1190px) {
+  .footer__container {
+    margin: 0 15px;
+  }
+}
 @media (max-width: 990px) {
   .hero {
     padding: 100px 15px;
@@ -637,7 +728,8 @@ body {
   .since,
   .projects,
   .decide,
-  .afraid {
+  .afraid,
+  .why {
     padding: 80px 15px;
   }
   .order__title,
@@ -674,6 +766,15 @@ body {
   }
   .afraid__title {
     margin-bottom: 50px;
+  }
+}
+@media (max-width: 900px) {
+  .why__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+  }
+  .footer__container {
+    padding: 50px 20px;
   }
 }
 @media (max-width: 800px) {
@@ -757,6 +858,12 @@ body {
     margin-bottom: 40px;
   }
 }
+@media (max-width: 720px) {
+  .footer__contacts {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
 @media (max-width: 670px) {
   .since__list {
     grid-template-columns: 1fr;
@@ -788,13 +895,17 @@ body {
   .projects__list {
     grid-template-columns: 1fr;
   }
+  .why__grid {
+    grid-template-columns: 1fr;
+  }
 }
 @media (max-width: 500px) {
   .hero,
   .since,
   .projects,
   .decide,
-  .afraid {
+  .afraid,
+  .why {
     padding: 50px 15px;
   }
   .hero__title {
@@ -840,7 +951,7 @@ body {
   }
   .afraid__bottom-btn {
     width: 225px;
-    &::before{
+    &::before {
       width: 20px;
       left: -20px;
     }
