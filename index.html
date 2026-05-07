@@ -12,9 +12,11 @@
       rel="stylesheet"
     />
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./css/reset.css" />
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/modals.css" />
+    <link rel="stylesheet" href="./css/swiper.css" />
   </head>
   <body>
     <main class="main">
@@ -142,47 +144,52 @@
                 <img src="./images/project1.jpg" alt="Проект Манхэттен image" />
               </div>
               <div class="projects__item-content">
-                <p class="projects__item-title">Проект Манхэттен</p>
+                <p class="projects__item-title">Проект Манхэттен 1</p>
                 <p class="projects__item-text">
                   Наполняем ландшафтный дизайн различными хвойными и лиственными
                 </p>
-                <button class="projects__item-btn">Дивитись проект</button>
+                <button class="projects__item-btn" data-project="manhattan">Дивитись проект</button>
               </div>
             </li>
             <li class="projects__item">
               <div class="projects__item-img">
-                <img src="./images/project2.jpg" alt="Проект Манхэттен image" />
+                <img src="./images/project2.jpg" alt="Проект forest image" />
               </div>
               <div class="projects__item-content">
-                <p class="projects__item-title">Проект Манхэттен</p>
+                <p class="projects__item-title">Проект forest 2</p>
                 <p class="projects__item-text">
                   Наполняем ландшафтный дизайн различными хвойными и лиственными
                 </p>
-                <button class="projects__item-btn">Дивитись проект</button>
+                <button class="projects__item-btn" data-project="forest">Дивитись проект</button>
               </div>
             </li>
             <li class="projects__item">
               <div class="projects__item-img">
-                <img src="./images/project3.jpg" alt="Проект Манхэттен image" />
+                <img src="./images/project3.jpg" alt="Проект modern image" />
               </div>
               <div class="projects__item-content">
-                <p class="projects__item-title">Проект Манхэттен</p>
+                <p class="projects__item-title">Проект modern 3</p>
                 <p class="projects__item-text">
                   Наполняем ландшафтный дизайн различными хвойными и лиственными
                 </p>
-                <button class="projects__item-btn">Дивитись проект</button>
+                <button class="projects__item-btn" data-project="modern">Дивитись проект</button>
               </div>
             </li>
             <li class="projects__item">
               <div class="projects__item-img">
-                <img src="./images/project4.jpg" alt="Проект Манхэттен image" />
+                <img
+                  src="https://vive.com.ua/wp-content/uploads/2026/05/proekt_ivankovychi_1.jpg"
+                  alt="Проект Манхэттен image"
+                />
               </div>
               <div class="projects__item-content">
-                <p class="projects__item-title">Проект Манхэттен</p>
+                <p class="projects__item-title">Ivankovychi Terrace</p>
                 <p class="projects__item-text">
-                  Наполняем ландшафтный дизайн различными хвойными и лиственными
+                  Сучасний (Modern), Сад із геопластикою (архітектурний рельєф)
                 </p>
-                <button class="projects__item-btn">Дивитись проект</button>
+                <button class="projects__item-btn" data-project="ivankovychi">
+                  Дивитись проект
+                </button>
               </div>
             </li>
             <li class="projects__item">
@@ -190,7 +197,7 @@
                 <img src="./images/project5.jpg" alt="Проект Манхэттен image" />
               </div>
               <div class="projects__item-content">
-                <p class="projects__item-title">Проект Манхэттен</p>
+                <p class="projects__item-title">Проект Манхэттен 5</p>
                 <p class="projects__item-text">
                   Наполняем ландшафтный дизайн различными хвойными и лиственными
                 </p>
@@ -202,7 +209,31 @@
                 <img src="./images/project6.jpg" alt="Проект Манхэттен image" />
               </div>
               <div class="projects__item-content">
-                <p class="projects__item-title">Проект Манхэттен</p>
+                <p class="projects__item-title">Проект Манхэттен 6</p>
+                <p class="projects__item-text">
+                  Наполняем ландшафтный дизайн различными хвойными и лиственными
+                </p>
+                <button class="projects__item-btn">Дивитись проект</button>
+              </div>
+            </li>
+            <li class="projects__item">
+              <div class="projects__item-img">
+                <img src="./images/project6.jpg" alt="Проект Манхэттен image" />
+              </div>
+              <div class="projects__item-content">
+                <p class="projects__item-title">Проект Манхэттен 7</p>
+                <p class="projects__item-text">
+                  Наполняем ландшафтный дизайн различными хвойными и лиственными
+                </p>
+                <button class="projects__item-btn">Дивитись проект</button>
+              </div>
+            </li>
+            <li class="projects__item">
+              <div class="projects__item-img">
+                <img src="./images/project6.jpg" alt="Проект Манхэттен image" />
+              </div>
+              <div class="projects__item-content">
+                <p class="projects__item-title">Проект Манхэттен 8</p>
                 <p class="projects__item-text">
                   Наполняем ландшафтный дизайн различными хвойными и лиственными
                 </p>
@@ -210,7 +241,8 @@
               </div>
             </li>
           </ul>
-          <button class="projects__btn action-btn" data-modal="projects-modal">Всі проекти</button>
+
+          <button class="projects__btn action-btn">Всі проекти</button>
         </div>
       </section>
 
@@ -480,17 +512,22 @@
 
         <div class="modal-projects__top">
           <div class="modal-projects__slide">
-            <img src="./images/project1.jpg" alt="projects" />
-
-            <div class="modal-projects__slide-bottom">
-              <button class="prev-slide"><img src="./images/arrow.svg" alt="" /></button>
-              <div class="modal-projects__slide-pagination">
-                <div class="modal-projects__slide-item"></div>
-                <div class="modal-projects__slide-item"></div>
-                <div class="modal-projects__slide-item active"></div>
-                <div class="modal-projects__slide-item"></div>
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./images/project1.jpg" alt="project name image 1 alt text" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/project2.jpg" alt="project name image 2 alt text" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./images/project3.jpg" alt="project name image 3 alt text" />
+                </div>
               </div>
-              <button class="next-slide"><img src="./images/arrow.svg" alt="" /></button>
+              <div class="swiper-pagination"></div>
+
+              <div class="swiper-button-prev"></div>
+              <div class="swiper-button-next"></div>
             </div>
           </div>
           <div class="modal-projects__details">
@@ -594,6 +631,9 @@
         <p class="modal__text">Ми зв’яжемось з вами найближчим часом</p>
       </div>
     </div>
-    <script src="./js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="./js/script.js" type="module"></script>
+    <script src="./js/swiper.js"></script>
   </body>
 </html>

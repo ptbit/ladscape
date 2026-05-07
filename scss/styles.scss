@@ -349,6 +349,9 @@ body {
     }
   }
 }
+.projects__item--hidden {
+  display: none;
+}
 .projects__item-content {
   padding: 30px;
 }
