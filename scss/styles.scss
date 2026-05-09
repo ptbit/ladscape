@@ -704,6 +704,64 @@ body {
 .footer__tels {
   gap: 20px;
 }
+
+//  ******************* NAV *******************
+//  ******************* NAV *******************
+//  ******************* NAV *******************
+
+.nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  top: 0;
+  z-index: 2;
+  max-width: 1140px;
+  width: 100%;
+  padding: 20px 15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.nav__list {
+  display: flex;
+  gap: 30px;
+}
+.nav__item {
+  padding: 0 5px;
+}
+.nav__link {
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+  text-shadow: 1px 10px 20px #f5f7f5;
+  &:hover {
+    color: #8ec909;
+  }
+}
+.burger {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: 1px #8ec909 solid;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  opacity: 0.7;
+  background-image: url('../images/menu.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  &.active {
+    background-image: url('../images/x.svg');
+  }
+  &:hover {
+    opacity: 1;
+    background-color: #8ec909;
+  }
+  // img {
+  //   width: 100%;
+  // }
+}
+
 //  ******************* MEDIA *******************
 //  ******************* MEDIA *******************
 //  ******************* MEDIA *******************
@@ -805,6 +863,34 @@ body {
   }
   .footer__container {
     padding: 50px 20px;
+  }
+  .burger {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    &.active {
+    }
+  }
+  .nav {
+    padding: 0;
+  }
+  .nav__list {
+    display: none;
+    flex-direction: column;
+    background-color: #fffceb;
+    color: #000000;
+    padding: 20px;
+    padding-bottom: 40px;
+    width: 100%;
+    &.active {
+      display: flex;
+    }
+  }
+
+  .nav__item {
+    padding: 10px;
+    text-align: center;
   }
 }
 @media (max-width: 800px) {
@@ -989,6 +1075,13 @@ body {
       width: 20px;
       right: -20px;
     }
+  }
+  .burger {
+    width: 40px;
+    height: 40px;
+  }
+  .hero{
+    padding-top: 60px;
   }
 }
 

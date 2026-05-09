@@ -128,3 +128,11 @@ document.querySelectorAll('.projects__item-btn').forEach((button) => {
     openModal('projects-modal');
   });
 });
+
+//MENU
+const menuBtn = document.querySelector('.burger');
+const navList = document.querySelector('.nav__list');
+menuBtn.addEventListener('click', () => {
+  navList.classList.toggle('active');
+  menuBtn.classList.toggle('active');
+});
