@@ -4,7 +4,7 @@ $data = json_decode(file_get_contents("php://input"), true);
 
 $phone = trim($data['phone']);
 
-$to = "yashopua@gmail.com";
+$to = "yourmail@gmail.com";
 $subject = "Нова заявка з сайту landscape";
 
 $message = "
