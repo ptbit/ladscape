@@ -1088,14 +1088,14 @@ body {
   .afraid__bottom {
     padding: 30px 15px 80px;
   }
-  .afraid__bottom-btn {
+  .button-box {
     width: 225px;
   }
-  .afraid__bottom-btn::before {
+  .button-box::before {
     width: 20px;
     left: -20px;
   }
-  .afraid__bottom-btn::after {
+  .button-box::after {
     width: 20px;
     right: -20px;
   }

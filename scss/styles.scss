@@ -1066,8 +1066,10 @@ body {
   .afraid__bottom {
     padding: 30px 15px 80px;
   }
-  .afraid__bottom-btn {
+
+  .button-box {
     width: 225px;
+
     &::before {
       width: 20px;
       left: -20px;
@@ -1081,7 +1083,7 @@ body {
     width: 40px;
     height: 40px;
   }
-  .hero{
+  .hero {
     padding-top: 60px;
   }
 }
