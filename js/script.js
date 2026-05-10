@@ -29,14 +29,52 @@ modals.forEach((modal) => {
   });
 });
 
+// document.querySelectorAll('.form').forEach((form) => {
+//   form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+
+//     closeAllModals();
+//     openModal('thanks-modal');
+
+//     form.reset();
+//   });
+// });
+
 document.querySelectorAll('.form').forEach((form) => {
-  form.addEventListener('submit', (e) => {
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    closeAllModals();
-    openModal('thanks-modal');
+    const phoneInput = form.querySelector('input[type="tel"]');
 
-    form.reset();
+    const phone = phoneInput.value;
+
+    try {
+      const response = await fetch('../send.php', {
+        method: 'POST',
+
+        headers: {
+          'Content-Type': 'application/json',
+        },
+
+        body: JSON.stringify({
+          phone,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        closeAllModals();
+        openModal('thanks-modal');
+
+        form.reset();
+      } else {
+        alert('Помилка відправки');
+      }
+    } catch (error) {
+      console.error(error);
+      alert('Помилка сервера');
+    }
   });
 });
 
